@@ -1,5 +1,5 @@
 # Jamia-Backend
-# Node Version: 20.11.0
+# Node Version: 20.11.0 
 # For Migration with Sequelize in command prompt
 # npm install sequelize
 # npm install -g sequelize-cli
