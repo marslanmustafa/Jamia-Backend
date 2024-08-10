@@ -1,14 +1,14 @@
-## Jamia-Backend
-# Node Version: 20.11.0 
+# Jamia-Backend
+## Node Version: 20.11.0 
 For Migration with Sequelize in command prompt
 >npm install sequelize
->npm install -g sequelize-cli
+>>npm install -g sequelize-cli
 >sequelize init
->Configuring the config.js file with the connected database.
+>>Configuring the config.js file with the connected database.
 
 # Create the model
 >sequelize model:generate --name User --attributes username:string,email:string
->To create migration for relation
+>>To create migration for relation
 >sequelize migration:create --name students
 
 # Run the Migration
