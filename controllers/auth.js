@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 const validator = require("validator");
-const uuid = require("uuid")
+const { v4: uuidv4 } = require("uuid")
 
 
 const register = async (req, res, next) => {
@@ -31,10 +31,9 @@ const register = async (req, res, next) => {
     if (user.length > 0) {
       return next(new HttpError("Email already exist!", 200));
     } else {
-      const id = crypto.randomUUID();
       let hashedPassword = await bcrypt.hash(password, 12);
       User.create({
-        id: id,
+        id: uuidv4(),
         username: username,
         email: email,
         password: hashedPassword,

@@ -2,6 +2,7 @@
 const UserModel = require('../models/user');
 const StudentModel = require('../models/student');
 const ClassModel = require('../models/class');
+const SubjectModel = require('../models/subject');
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('jamiadb', 'root', '', {
 // const sequelize = new Sequelize('umazing', 'root', '', {
@@ -20,10 +21,12 @@ sequelize.authenticate()
 const User = UserModel(sequelize, Sequelize);
 const Student = StudentModel(sequelize, Sequelize);
 const Class = ClassModel(sequelize, Sequelize);
+const Subject = SubjectModel(sequelize, Sequelize);
 
 // Define Associations
 module.exports = {
 User,
 Class,
-Student
+Student,
+Subject
 };
